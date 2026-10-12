@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Checkout</title>
+<link rel="stylesheet" href="checkout.css">
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Checkout</h1>
+
+<div class="checkout-container">
+
+<!-- Address Section -->
+
+<div class="address">
+
+<h2>Shipping Address</h2>
+
+<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Phone Number">
+<input type="text" placeholder="Address">
+<input type="text" placeholder="City">
+<input type="text" placeholder="Pincode">
+
+</div>
+
+<!-- Payment Section -->
+
+<div class="payment">
+
+<h2>Payment Method</h2>
+
+<label>
+<input type="radio" name="payment"> UPI
+</label>
+
+<label>
+<input type="radio" name="payment"> Credit / Debit Card
+</label>
+
+<label>
+<input type="radio" name="payment"> Cash on Delivery
+</label>
+
+<button class="pay-btn" onclick="orderPlaced()">
+Place Order
+</button>
+
+</div>
+
+</div>
+<script>
+
+function orderPlaced(){
+
+alert("Order placed successfully!");
+
+localStorage.removeItem("cart");
+
+window.location.href="index.html";
+
+}
+
+</script>
+</body>
+
+</html>
